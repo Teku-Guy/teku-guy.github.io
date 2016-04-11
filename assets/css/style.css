@@ -1,0 +1,227 @@
+/**Styles**/
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url(../fonts/MyriadPro-Regular.otf);
+}
+
+body{
+    font-family: 'Myriad Pro';
+}
+
+a{
+    text-decoration: none;
+    color: #d35400;
+}
+a:hover{
+    color: #8e44ad;
+}
+
+.content{
+    left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 1266px;
+	 height: 1872px; 
+	 overflow: hidden;
+	 z-index:0;
+}
+/**Header**/
+.nav {
+    width: 100%;
+    height: 61px;
+    background: #381120;
+}
+
+.nav .logo a{
+    float: left;
+    text-decoration: none;
+    color: #7e7e7e;
+    font-size: 43px;
+    padding-top: 11px;
+    padding-left: 30px;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.nav ul:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.nav ul li {
+    list-style: none;
+    float: left;
+    display: block;
+    padding: 19px;
+}
+
+.nav ul li a {
+    color: #7e7e7e;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.nav ul ul.sub-nav {
+    display: none;
+    background: #381120;
+    width: 110px;
+    position: absolute;
+}
+
+.nav ul li:hover > ul {
+    display: block;
+}
+
+.nav ul ul li {
+    float: none;
+    padding-left: 24px;
+}
+
+.nav ul li a.active {
+    color: #08a1c7;
+}
+
+.nav ul li a:hover {
+    color: #efefef;
+}
+
+/**Hero**/
+.hero {
+    height: 539px;
+    width: auto;
+    background: #0d2239;
+    z-index: 1;
+}
+
+.hero h1 {
+    /*padding-top: 110px;*/
+    font-size: 80px;
+    color: #e74c3c;
+    left: 333px; 
+    top: 270px; 
+    position: absolute; 
+    width: 650px;
+    height: 58px;
+    z-index:14;
+}
+
+.hero span {
+    /*color: #e74c3c;
+    display: inline-block;*/
+    background: url(../img/Brackets.png);
+    background-repeat: no-repeat;
+    /*background-position: center;
+    padding-top:72px;
+    height: 136px;
+    width: 660px;*/
+    left: 305px; 
+	 top: 236px; 
+	 position: absolute; 
+	 width: 660px;
+	 height: 136px;
+	 z-index:15;
+}
+
+.hero h4 {
+    /*padding-top: 60px;
+    padding-left: 303px;*/
+    color: #e74c3c;
+    font-size: 30px;
+    left: 303px; 
+    top: 430px; 
+    position: absolute; 
+    width: auto;
+    height: 28px;
+    z-index:16;
+}
+
+/**Main-about**/
+#main-about {
+    height: 1000px;
+    background: #adabaa;
+    text-align: center;
+}
+
+/**Circles**/
+#cirs {
+    width: AUTO;
+}
+
+
+
+#cir {
+    background-image: url(../img/face.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 179px;
+    padding-bottom: 178px;
+    
+}
+
+#main-about h2 {
+    font-size: 90px;
+    color: #ffffff;
+    padding-bottom: 45px;
+    padding-left: 156px;
+    padding-right: 156px;
+}
+
+#main-about p {
+    padding-top: 46px;
+    color: #ffffff;
+    font-size: 40px;
+    padding-bottom: 80px;
+    padding-left: 156px;
+    padding-right: 156px;
+}
+
+#main-about .btn-learn{
+    background: #0995b8;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 0px;
+    height: 100px;
+    width: 280px;
+}
+
+#main-about .btn-learn a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 40px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.main-about .btn-learn:hover{
+    background: #381120;
+}
+
+/**Footer**/
+
+.footer {
+    height: 280px;
+    background: #381120;
+    padding-top: 100px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #7e7e7e;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 1689px;
+    margin-left: 229px;
+}
+
+.footer a:hover {
+    color: #0995b8;
+}

@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Myriad Pro';
+    background: #381120;
 }
 
 a{
@@ -29,7 +30,7 @@ a:hover{
 }
 /**Header**/
 .nav {
-    width: 100%;
+    width: auto;
     height: 61px;
     background: #381120;
 }

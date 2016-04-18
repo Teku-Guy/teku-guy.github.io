@@ -28,9 +28,8 @@ a:hover{
 	 position: relative; 
 	 margin-left: auto; 
 	 margin-right: auto;
-	 height: 1872px; 
+	 height: auto; 
 	 overflow: hidden;
-	 z-index:0;
 }
 /**Header**/
 .nav {
@@ -51,12 +50,6 @@ a:hover{
     margin: 0;
     padding: 0;
     float: right;
-}
-
-.nav ul:after{
-    content: "";
-    clear: both;
-    display: block;
 }
 
 .nav ul li {
@@ -96,6 +89,10 @@ a:hover{
     color: #efefef;
 }
 
+.pull{
+    display: none;
+}
+
 .clearfix:before, .clear:after{
     content: "";
     display: table;
@@ -111,37 +108,30 @@ a:hover{
 /**Hero**/
 .hero {
     height: 539px;
-    width: auto;
     background: #0d2239;
-    z-index: 1;
 }
 
 .hero h1 {
     /*padding-top: 110px;*/
     font-size: 80px;
+    width: 89%;
+    height: auto;
     color: #e74c3c;
-    left: 333px; 
-    top: 270px; 
+    margin-left: 27px; 
+    margin-top: 35px; 
     position: absolute;
     height: 58px;
-    z-index:14;
 }
 
 .hero span {
-    /*color: #e74c3c;
-    display: inline-block;*/
     background: url(../img/Brackets.png);
     background-repeat: no-repeat;
-    /*background-position: center;
-    padding-top:72px;
-    height: 136px;
-    width: 660px;*/
-    left: 305px; 
-	 top: 236px; 
-	 position: absolute; 
-	 width: 660px;
-	 height: 136px;
-	 z-index:15;
+    position: absolute;
+    width: 680px;
+    height: 150px;
+    margin-top: 175px;
+    margin-left: 305px;
+    margin-right: 305px;
 }
 
 .hero h4 {
@@ -159,7 +149,7 @@ a:hover{
 
 /**Main-about**/
 #main-about {
-    height: 1000px;
+    height: auto;
     background: #adabaa;
     text-align: center;
 }
@@ -206,6 +196,7 @@ a:hover{
     border: 0px;
     height: 100px;
     width: 280px;
+    margin-bottom: 70px;
 }
 
 #main-about .btn-learn a{
@@ -223,19 +214,25 @@ a:hover{
 /**Footer**/
 
 .footer {
-    height: 280px;
+    height: auto;
+    display: block;
+    margin-left: 0;
     background: #381120;
-    padding-top: 100px;
     clear: both;
 }
 
-.footer a {
-    text-decoration: none;
+.footer p{
     color: #7e7e7e;
+    width: 100%;
     font-size: 80px;
     text-align: center;
-    margin-top: 1689px;
-    margin-left: 229px;
+}
+
+.footer p a{
+    width: auto;
+    text-align: center;
+    line-height: 4;
+    color: #7e7e7e;
 }
 
 .footer a:hover {
@@ -243,10 +240,71 @@ a:hover{
 }
 
 /**Moble Styles**/
-@media screen and (max-width: 480px){
+    /**480px**/
+@media only screen and (max-width : 480px) {
     
-    .nav ul li {
-        float:none; 
+    .nav ul li{
+        float: none;
+        border-bottom: 1px solid #7e7e7e;
     }
     
+    .hero h1 {
+        font-size: 45px;
+        width: 89%;
+        height: auto;
+        color: #e74c3c;
+        margin-left: 27px; 
+        margin-top: 35px; 
+        position: absolute;
+        height: 58px;
+    }
+
+    .hero span {
+        background: url(../img/Brackets.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 680px;
+        height: 150px;
+        margin-top: 175px;
+        margin-left: 11px;
+        margin-right: 305px;
+    }
+    
+    .hero h4 {
+        color: #e74c3c;
+        font-size: 30px;
+        left: 30px; 
+        top: 430px; 
+        position: absolute; 
+        width: auto;
+        height: 28px;
+        z-index:16;
+    }
+    
+    #main-about h2 {
+        font-size: 60px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    
+    #main-about p{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 20px;
+    }
+    
+    #main-about .btn-learn{
+        height: 80px;
+        width: 200px;
+        margin-bottom: 70px;
+    }
+    
+    #main-about .btn-learn a{
+        font-size: 25px;
+    }
+    
+    .footer p{
+        font-size: 35px;
+    }
 }

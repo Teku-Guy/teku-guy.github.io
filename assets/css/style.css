@@ -37,7 +37,7 @@ a:hover{
     background: #381120;
 }
 
-.nav .logo a{
+.logo a{
     float: left;
     text-decoration: none;
     color: #7e7e7e;
@@ -89,10 +89,6 @@ a:hover{
     color: #efefef;
 }
 
-.pull{
-    display: none;
-}
-
 .clearfix:before, .clear:after{
     content: "";
     display: table;
@@ -117,7 +113,8 @@ a:hover{
     width: 89%;
     height: auto;
     color: #e74c3c;
-    margin-left: 27px; 
+    margin-left: 27px;
+    margin-right: 27px;
     margin-top: 35px; 
     position: absolute;
     height: 58px;
@@ -129,9 +126,9 @@ a:hover{
     position: absolute;
     width: 680px;
     height: 150px;
-    margin-top: 175px;
-    margin-left: 305px;
-    margin-right: 305px;
+    margin-top: 155px;
+    margin-left: 270px;
+    margin-right: 300px;
 }
 
 .hero h4 {
@@ -139,12 +136,11 @@ a:hover{
     padding-left: 303px;*/
     color: #e74c3c;
     font-size: 30px;
-    left: 303px; 
-    top: 430px; 
+    margin-left: 270px; 
+    margin-top: 390px; 
     position: absolute; 
     width: auto;
     height: 28px;
-    z-index:16;
 }
 
 /**Main-about**/
@@ -207,7 +203,7 @@ a:hover{
     text-align: center;
 }
 
-.main-about .btn-learn:hover{
+#main-about .btn-learn:hover{
     background: #381120;
 }
 
@@ -240,12 +236,44 @@ a:hover{
 }
 
 /**Moble Styles**/
+.menu-trigger{
+    padding-top: 16px;
+    padding-right: 30px;
+    font-size: 25px;
+    text-align: center;
+    display: none;
+    float: right;
+    color: #7e7e7e
+}
+
+.menu-trigger p{
+    color: #7e7e7e
+}
+
     /**480px**/
+
+
 @media only screen and (max-width : 480px) {
+    
+    .menu-trigger{
+        display: block;
+    }
+    
+    .nav, .mobile-nav{
+        display: none;
+    }
+    
+    .nav-expanded{
+        display: block;
+    }
     
     .nav ul li{
         float: none;
         border-bottom: 1px solid #7e7e7e;
+    }
+    
+    .nav ul li:last-child{
+        border-bottom: none;
     }
     
     .hero h1 {

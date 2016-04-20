@@ -111,7 +111,7 @@ a:hover{
     background: #0d2239;
 }
 
-.hero h1 {
+.hero div h1 {
     /*padding-top: 110px;*/
     font-size: 80px;
     width: 89%;
@@ -124,7 +124,7 @@ a:hover{
     height: 58px;
 }
 
-.hero span {
+.hero div div span {
     background: url(../img/Brackets.png);
     background-repeat: no-repeat;
     position: absolute;
@@ -135,7 +135,7 @@ a:hover{
     margin-right: 300px;
 }
 
-.hero h4 {
+.hero div div h4 {
     /*padding-top: 60px;
     padding-left: 303px;*/
     color: #e74c3c;
@@ -221,7 +221,7 @@ a:hover{
     clear: both;
 }
 
-.footer p{
+.footer p a{
     color: #7e7e7e;
     width: 100%;
     font-size: 80px;
@@ -231,7 +231,7 @@ a:hover{
 .footer p a{
     width: auto;
     text-align: center;
-    line-height: 4;
+    line-height: 3;
     color: #7e7e7e;
 }
 
@@ -276,8 +276,15 @@ a:hover{
     }
     
     .nav{
+        margin-top: -20px;
         display: none;
         height: auto;
+        width: auto;
+    }
+    
+    .nav ul{
+        float: right;
+        width: 100%;
     }
     
     .nav-expanded{
@@ -286,11 +293,44 @@ a:hover{
     
     .nav ul li{
         float: none;
+        padding: 0;
+        text-align: center;
+        line-height: 2;
+        border-top: 1px solid #7e7e7e;
         border-bottom: 1px solid #7e7e7e;
     }
     
     .nav ul li:last-child{
-        border-bottom: none;
+        border-bottom: 2px solid #7e7e7e; 
+    }
+    
+    .nav ul li:first-child{
+        border-top: 2px solid #7e7e7e;
+    }
+    
+    .nav ul li.fix{
+        padding: 0;
+    }
+    
+    .nav ul li ul.sub-nav{
+        float: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: relative;
+    }
+    
+    .nav ul li ul.sub-nav li{
+        padding: 0px;
+        
+    }
+    
+    .nav ul li ul.sub-nav li:last-child{
+        border-bottom: 0;
+    }
+    
+    .nav ul li:last-child{
+        margin-bottom: ;
     }
     
     .hero h1 {
@@ -349,7 +389,7 @@ a:hover{
         font-size: 25px;
     }
     
-    .footer p{
+    .footer p, .footer p a{
         font-size: 35px;
     }
 }

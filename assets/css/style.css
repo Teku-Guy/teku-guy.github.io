@@ -14,6 +14,10 @@ body{
     width: auto;
 }
 
+div{
+    display: block;
+}
+
 a{
     text-decoration: none;
     color: #d35400;
@@ -39,11 +43,13 @@ a:hover{
 
 .logo a{
     float: left;
+    width: 61px;
+    height: 34px;
     text-decoration: none;
     color: #7e7e7e;
     font-size: 43px;
-    padding-top: 11px;
-    padding-left: 30px;
+    margin-top: 11px;
+    margin-left: 30px;
 }
 
 .nav ul {
@@ -111,7 +117,7 @@ a:hover{
     background: #0d2239;
 }
 
-.hero div h1 {
+.hero h1 {
     /*padding-top: 110px;*/
     font-size: 80px;
     width: 89%;
@@ -124,7 +130,7 @@ a:hover{
     height: 58px;
 }
 
-.hero div div span {
+.hero span {
     background: url(../img/Brackets.png);
     background-repeat: no-repeat;
     position: absolute;
@@ -135,7 +141,7 @@ a:hover{
     margin-right: 300px;
 }
 
-.hero div div h4 {
+.hero h4 {
     /*padding-top: 60px;
     padding-left: 303px;*/
     color: #e74c3c;
@@ -214,29 +220,141 @@ a:hover{
 /**Footer**/
 
 .footer {
+    padding: 0;
+    margin: 0;
     height: auto;
+    margin: auto;
     display: block;
-    margin-left: 0;
     background: #381120;
-    clear: both;
 }
 
-.footer p a{
+.footer a{
     color: #7e7e7e;
+    display: block;
     width: 100%;
-    font-size: 80px;
+    line-height: 4;
     text-align: center;
+    font-size: 80px;
 }
 
-.footer p a{
-    width: auto;
-    text-align: center;
-    line-height: 3;
-    color: #7e7e7e;
+@media (max-width: 1000px) {
+    .footer a {
+      font-size: 60px;
+    }
+}
+
+@media (max-width: 895px){
+    .footer a {
+      font-size: 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer a {
+      font-size: 45px;
+    }
 }
 
 .footer a:hover {
     color: #0995b8;
+}
+/**CForm**/
+.cform {
+    width:auto;
+    height: auto;
+    background: #0d2239;
+    line-height: 2;
+}
+
+div.cform
+{
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+.cform form
+{
+    display: inline-block;
+    width: 450px;
+}
+
+.cform form input{
+    margin-bottom: 25px
+}
+
+.cform h1{
+    margin: auto;
+    color: #fff;
+    height: auto;
+    width: auto;
+    line-height: 3;
+    font-size: 50px;
+}
+
+.cform form input, .cform form textarea{
+    border: 3px solid #0995b8;
+    vertical-align: baseline;
+}
+
+.cform input:focus, .cform textarea:focus{
+    border: 3px solid #e74c3c;
+}
+
+.cform textarea, cform input{
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    flex-direction: column;
+    resize: auto;
+    cursor: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.cform button{
+    width: 75px;
+    height: 50px;
+    color: #fff;
+    border: 3px solid #0995b8;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    float: left;
+}
+
+.cform button:hover{
+    border-color: #fff;
+    color: #0995b8;
+}
+
+/**Misc**/
+.comson{
+    width: auto;
+    height: 600px;
+    background: #0d2239;
+    text-align: center;
+    line-height: 6;
+    font-size: 100px;
+    color: #fff;
+}
+
+.comson a{
+    color: #fff;
+}
+
+.comson a:hover{
+    color: #dedede;
+}
+
+@media (max-width: 895px){
+    .comson a {
+      font-size: 90px;
+    }
+}
+
+@media (max-width: 650px) {
+    .comson a {
+      font-size: 80px;
+    }
 }
 
 /**Moble Styles**/
@@ -389,7 +507,16 @@ a:hover{
         font-size: 25px;
     }
     
-    .footer p, .footer p a{
-        font-size: 35px;
+    .cform form{
+        width: 300px;
+    }
+    
+    .comson a {
+      font-size: 70px;
+    }
+    
+    .footer a{
+        line-height: 6;
+        font-size: 25px;
     }
 }

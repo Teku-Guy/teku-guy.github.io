@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
+    <meta charset="UTF-8" />
     <title>Gustavo Muratalla</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/foundation.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="content">
+   <div class="content">
         <div class="header">
-            <nav class="nav">
-                <div class="logo"><a href="assets/img/logo.png" alt="GM">GM</a>
-                </div>
-                <ul>
-                    <li><a href="index.html">Home</a>
-                    </li>
-                    <li><a class="active" href="about.html">About</a>
-                    </li>
-                    <li><a href="#">Portfolio <i class="fa fa-angle-down fa-1"></i></a>
+          <div class="mobile-nav">
+              <div class="logo"><a href="index.html" alt="GM">GM</a></div>
+                <span class="menu-trigger">Menu</span>
+            </div>
+            <nav class="nav clearfix">
+                <ul class="clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="about.html">About</a></li>
+                    <li class="fix"><a href="#">Portfolio <i class="fa fa-angle-down fa-1"></i></a>
                         <ul class="sub-nav">
-                            <li><a href="music.html">Music</a>
-                            </li>
-                            <li><a href="code.html">Code</a>
-                            </li>
+                            <li><a href="music.html">Music</a></li>
+                            <li><a href="code.html">Code</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a>
-                    </li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <!-- end of Nav -->
         </div>
+        
         <div id="main-about">
             <div id="cirs">
                 <div id="cir"></div>
@@ -43,10 +46,22 @@
             <button class="btn-learn"><a href="about.html">Learn More</a>
             </button>
         </div>
+        
         <footer class="footer">
-            <a href="mailto:gusmuratalla@gmail.com" target="_blank">gusmuratalla@gmail.com</a>
+            <div class="row">
+                <div class="column">
+                        <p>
+                            <a href="mailto:gusmuratalla@gmail.com">gusmuratalla@gmail.com</a>
+                        </p>
+                </div>
+            </div>
         </footer>
+        
     </div>
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
-
 </html>

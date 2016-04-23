@@ -328,16 +328,19 @@ div.cform
 
 /**Misc**/
 .comson{
-    width: auto;
     height: 600px;
     background: #0d2239;
+}
+
+.comson h1{
+    text-align: center;
+}
+
+.comson h1 a{
     text-align: center;
     line-height: 6;
     font-size: 100px;
     color: #fff;
-}
-
-.comson a{
     color: #fff;
 }
 
@@ -346,25 +349,88 @@ div.cform
 }
 
 @media (max-width: 895px){
-    .comson a {
-      font-size: 90px;
+    .comson{
+        height: 670px;
+    }
+    .comson h1{
+        text-align: center;
+    }
+    .comson h1 a{
+        line-height: 7;
+        font-size: 90px;
+    }
+    .center{
+        height: 200px;
+    }
+    .footer a{
+        height: 200px;
+        line-height: 6;
     }
 }
 
 @media (max-width: 650px) {
-    .comson a {
+    .comson h1 a {
       font-size: 80px;
     }
 }
 
+@media (max-width: 560px){
+    .comson h1 a {
+      font-size: 70px;
+    }
+}
+
+@media (max-width: 450px){
+    .comson{
+        height: 580px;
+    }
+    .comson h1{
+        text-align: center;
+    }
+    .comson h1 a{
+        line-height: 10;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 425px){
+    .comson {
+        height: 460px;
+    }
+    
+    .center{
+        height: 150px;
+    }
+    
+    .footer a{
+        height: 100px;
+    }
+}
+
 @media (max-width: 375px){
-    .comson a{
-        font-size: 60px;
+    .comson{
+        height: 450px;
+    }
+    .comson h1{
+        text-align: center;
+    }
+    .comson h1 a{
+        line-height: 10;
+        font-size: 40px;
     }
 }
 
 @media (max-width: 320px){
-    
+    .comson{
+        height: 380px;
+    }
+    .comson h1{
+        text-align: center;
+    }
+    .comson h1 a{
+        line-height: 8;
+        font-size: 40px;
+    }
 }
 
 /**Moble Styles**/
@@ -387,8 +453,6 @@ div.cform
     padding-left: 19px;
     padding-top: 17px;
 }
-
-    /**480px**/
 
 
 @media only screen and (max-width : 560px) {
@@ -521,12 +585,13 @@ div.cform
         width: 300px;
     }
     
-    .comson a {
-      font-size: 70px;
+    .center{
+        height: 125px
     }
     
     .footer a{
-        line-height: 6;
+        height: 200px;
+        line-height: 130px;
         font-size: 25px;
     }
 }

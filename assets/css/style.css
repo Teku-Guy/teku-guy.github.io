@@ -357,6 +357,12 @@ div.cform
     }
 }
 
+@media (max-width: 375){
+    .comson a{
+        font-size: 60px;
+    }
+}
+
 /**Moble Styles**/
 .menu-trigger{
     padding-top: 16px;

@@ -327,6 +327,7 @@ div.cform
 }
 
 /**Misc**/
+
 .comson{
     height: 600px;
     background: #0d2239;
@@ -344,7 +345,7 @@ div.cform
     color: #fff;
 }
 
-.comson a:hover{
+.comson h1 a:hover{
     color: #dedede;
 }
 

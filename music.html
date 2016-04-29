@@ -1,54 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <title>Gustavo Muratalla</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/foundation.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <title>Gustavo Muratalla</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/music-player.css">
 </head>
 
 <body>
-   <div class="content">
-        <div class="header">
-          <div class="mobile-nav">
-              <div class="logo"><a href="index.html" alt="GM">GM</a></div>
-                <span class="menu-trigger">Menu</span>
-            </div>
-            <nav class="nav clearfix">
-                <ul class="clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="fix"><a class="active" href="#">Portfolio <i class="fa fa-angle-down fa-1"></i></a>
-                        <ul class="sub-nav">
-                            <li><a class="active" href="music.html">Music</a></li>
-                            <li><a href="code.html">Code</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <!-- end of Nav -->
-        </div>
-
-        <div class="comson">
-            <h1><a>Coomming Soon!</a></h1>
-        </div>
-
-        <footer class="footer">
-                       <div class="center">
-                            <a href="mailto:gusmuratalla@gmail.com"> gusmuratalla@gmail.com </a>
-                    </div>
-        </footer>
+  <div class="header">
+    <div class="mobile-nav">
+      <div class="logo"><a href="index.html" alt="GM">GM</a></div>
+      <span class="menu-trigger">Menu</span>
     </div>
-    
-    
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <nav class="nav clearfix">
+      <ul class="clearfix">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="fix"><a class="active" href="#">Portfolio <i class="fa fa-angle-down fa-1"></i></a>
+          <ul class="sub-nav">
+            <li><a class="active" href="music.html">Music</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- end of Nav -->
+  </div>
+  <div class="page-wrap">
+    <div class="music">
+      <h1>Music</h1>
+      <div id="audio-player">
+
+      </div>
+
+      <div audio-player>
+        <ul id="playlist" class="">
+          <li song="Gustavo - track1.mp3" cover="cover1.jpg" artist="Gustavo" class="active">Track1.mp3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="m-player">
+    <!-- Audio player -->
+<div class="ap" id="ap">
+  <div class="ap-inner">
+    <div class="ap-panel">
+      <div class="ap-item ap--playback">
+        <button class="ap-controls ap-prev-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="24" viewBox="0 0 24 24" width="24">
+              <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+        <button class="ap-controls ap-toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#fff"  height="30" viewBox="0 0 24 24" width="30" class="ap--play">
+            <path d="M8 5v14l11-7z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="30" viewBox="0 0 24 24" width="30" class="ap--pause">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+        <button class="ap-controls ap-next-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="24" viewBox="0 0 24 24" width="24">
+              <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+      </div>
+      <div class="ap-item ap--track">
+        <div class="ap-info">
+          <div class="ap-title">Unknown</div>
+          <div class="ap-time">
+            <span class="ap-time--current">--</span>
+            <span> / </span>
+            <span class="ap-time--duration">--</span>
+          </div>
+
+          <div class="ap-progress-container">
+            <div class="ap-progress">
+              <div class="ap-bar"></div>
+              <div class="ap-preload-bar"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ap-item ap--settings">
+        <div class="ap-controls ap-volume-container">
+          <button class="ap-volume-btn">
+            <svg fill="#ffffff" height="48" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="ap--volume-on">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="48" viewBox="0 0 24 24" width="24" class="ap--volume-off">
+                <path d="M7 9v6h4l5 5V4l-5 5H7z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </button>
+          <div class="ap-volume">
+            <div class="ap-volume-progress"><div class="ap-volume-bar"></div></div>
+          </div>
+        </div>
+        <button class="ap-controls ap-repeat-btn">
+          <svg fill="#ffffff"  height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+          </svg>
+        </button>
+        <button class="ap-controls ap-playlist-btn">
+          <svg fill="#ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  </footer>
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/player.js"></script>
+  <script src="assets/js/script.js"></script>
+
 </body>
+
 </html>

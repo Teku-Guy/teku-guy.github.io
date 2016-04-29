@@ -97,7 +97,7 @@ button {
   user-select: none;
   color: #fff;
   background: #381120;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #381120;
   z-index: 9999;
 }
 .ap-inner {
@@ -146,7 +146,7 @@ button {
   position: relative;
   height: 3px;
   border-radius: 5px;
-  background: rgba(0,0,0,.2);
+  background: #dedede;
 }
 .ap-preload-bar,
 .ap-bar {
@@ -160,7 +160,7 @@ button {
   z-index: 999;
 }
 .ap-bar {
-  background: #f50;
+  background: #0995b8;
   z-index: 9999;
 }
 .ap-bar:after {
@@ -171,8 +171,14 @@ button {
   height: 12px;
   margin-top: -4px;
   content: '';
-  border-radius: 6px;
-  background: #f50;
+  background: #381120;
+  border-width: 2px;
+  border-color: rgb(9, 149, 184);
+  border-style: solid;
+  border-radius: 50%;
+}
+
+  background: #381120;
   opacity: 0;
   transition: opacity .3s ease;
 }
@@ -195,10 +201,13 @@ button {
   background: none;
 }
 .ap-controls svg {
-  fill: #333;
+  fill: #fff;
 }
 .ap-controls:hover svg {
-  fill: #222;
+  fill: #0995b8;
+}
+.ap-active svg{
+    fill: #2ee;
 }
 .ap-controls:active {
   background: rgba(0,0,0,.1);
@@ -226,9 +235,8 @@ button {
   height: 0;
   visibility: hidden;
   transition: height .2s cubic-bezier(0.17, 0.72, 0.26, 1.23);
-  background: #ddd;
-  border: 1px solid #ccc;
-  border-bottom: 0;
+  background: #381120;
+  border: 1px solid #512c3b;
   z-index: 9999;
 }
 .ap-volume-btn {
@@ -244,7 +252,7 @@ button {
   display: inline;
 }
 .ap-volume-container:hover {
-  background: #ddd;
+  background: #512c3b;
 }
 .ap-volume-container:hover .ap-volume {
   height: 120px;
@@ -264,13 +272,14 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #f50;
+  background: #0995b8;
   height: 50%;
   border-radius: 3px;
 }
 
 .ap-active {
-  background: rgba(0,0,0,.15);
+  background: #512c3b;
+  fill: #2ee;
   opacity: 1;
 }
 
@@ -324,7 +333,7 @@ button {
   overflow: auto;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  background: #f1f1f1;
+  background: #dedede;
   z-index: 999;
 }
 .pl-lead {
@@ -341,8 +350,9 @@ button {
 }
 .pl-list > li {
   display: flex;
+  color: #666;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000;
 }
 .pl-number,
 .pl-title,

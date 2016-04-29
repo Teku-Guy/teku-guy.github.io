@@ -563,14 +563,14 @@ window.AP = AudioPlayer;
 
 
 // test image for web notifications
-var iconImage = 'http://funkyimg.com/i/21pX5.png';
+var mustbenice = 'http://images.rapgenius.com/7c48c54b9ce1776f83c093556ecb4411.1000x1000x1.jpg';
+var demo = 'http://funkyimg.com/i/21pX5.png';
+var 
 
 AP.init({
   playList: [
-    {'icon': iconImage, 'title': 'Track1', 'file': 'http://gustavo-muratalla/music/track1.mp3'},
-    {'icon': iconImage, 'title': 'Forever Believe', 'file': 'https://a.clyp.it/zbh0qeyo.mp3'},
-    {'icon': iconImage, 'title': 'Drifting', 'file': 'https://a.clyp.it/bthbgqcs.mp3'},
-    {'icon': iconImage, 'title': 'Clap Along (Lorem ipsum dolor sit amet, consectetur adipisicing.)', 'file': 'https://a.clyp.it/lygki3hx.mp3'},
-    {'icon': iconImage, 'title': 'Pop Tune', 'file': 'https://a.clyp.it/enddsv44.mp3'}
+    {'icon': mustbenice, 'title': 'Must Be Nice', 'file': 'http://gustavo-muratalla.me/assets/music/track1.mp3'},
+    {'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'},
+    {'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.wav'}
   ]
 });

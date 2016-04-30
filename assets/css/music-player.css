@@ -50,7 +50,27 @@ footer.m-player{
 
 .playlist {
     list-style-type: none;
-    padding: 10px;
+    width: 30%;
+    height: ;
+    padding: 30px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 12%;
+    display: block;
+    background-color: #777;
+}
+
+div.playlist2{
+    width: auto;
+    height: 100px;
+}
+
+.playlist2 .playlist{
+    float: right;
+    flex: 0 25%;
+    top: 260px;
+    right: 10%;
+    position: absolute;
 }
 
 .playlist li {
@@ -62,12 +82,8 @@ footer.m-player{
     text-align: center;
 }
 
-.playlist li a{
-    color: aqua;
-}
-
-.playlist li a:hover{
-    color: #000;
+.playlist li:hover{
+    background: rgba(0,0,0,.5);
 }
 
 

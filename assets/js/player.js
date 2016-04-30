@@ -7,6 +7,7 @@ var AudioPlayer = (function() {
   // Player vars
   var
   player = document.getElementById('ap'),
+  link,
   playBtn,
   prevBtn,
   nextBtn,
@@ -138,7 +139,7 @@ var AudioPlayer = (function() {
               '</div>'+
             '</div>'+
           '</div>'+
-          '<div class="pl-title">{title}</div>'+
+          '<div class="pl-title"><a class="link">{title}</a></div>'+
           '<button class="pl-remove">'+
               '<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">'+
                   '<path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>'+
@@ -469,9 +470,7 @@ var AudioPlayer = (function() {
   function destroy() {
     if(!apActive) return;
 
-    playBtn.removeEventListener('click', playToggle, true);
-    playBtn.classList.remove('playing');
-    progressBar.style.width = 0;
+    playBtn.removeEventListener('click', playToggle, false);
     volumeBtn.removeEventListener('click', volumeToggle, false);
     repeatBtn.removeEventListener('click', repeatToggle, false);
     plBtn.removeEventListener('click', plToggle, false);
@@ -574,24 +573,19 @@ var allTracks = [{'icon': mustbenice, 'title': 'Must Be Nice', 'file': 'http://g
     {'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'},
     {'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]; 
 
-var myTracks = [{'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'},
+var newest = [{'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'},
     {'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}];
+
 
 //getPlayList
 AP.init({
-  playList: myTracks
+  playList: [{'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]
 });
 
-    jQuery('.playlist li .allTracks').click(function() {
-        AP.destroy();
-        //player.parentNode.removeChild(player);
-    
-        AP.init({
-            playList: allTracks
-        });
-    });
-
-jQuery('.playlist li .myTracks').click(function() {
+/*
+**Playlist switches
+*/
+jQuery('.playlist li.newest').click(function() {
         AP.destroy();
         //player.parentNode.removeChild(player);
     
@@ -599,3 +593,33 @@ jQuery('.playlist li .myTracks').click(function() {
             playList: myTracks
         });
     });
+
+jQuery('.playlist li.allTracks').click(function() {
+    AP.destroy();
+    //player.parentNode.removeChild(player);
+    
+    AP.init({
+        playList: allTracks
+    });
+});
+
+/*
+**Single Tracks plist
+*/
+jQuery('.playlist li.demo').click(function() {
+    AP.destroy();
+    //player.parentNode.removeChild(player);
+    
+    AP.init({
+        playList: [{'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'}]
+    });
+});
+
+jQuery('.playlist li.preview').click(function() {
+    AP.destroy();
+    //player.parentNode.removeChild(player);
+    
+    AP.init({
+        playList: [{'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]
+    });
+});

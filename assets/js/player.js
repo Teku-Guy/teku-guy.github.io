@@ -139,7 +139,7 @@ var AudioPlayer = (function() {
               '</div>'+
             '</div>'+
           '</div>'+
-          '<div class="pl-title"><a class="link">{title}</a></div>'+
+          '<div class="pl-title"><a class="link" href="#">{title}</a></div>'+
           '<button class="pl-remove">'+
               '<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">'+
                   '<path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>'+
@@ -576,7 +576,6 @@ var allTracks = [{'icon': mustbenice, 'title': 'Must Be Nice', 'file': 'http://g
 var newest = [{'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'},
     {'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}];
 
-
 //getPlayList
 AP.init({
   playList: [{'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]
@@ -621,5 +620,14 @@ jQuery('.playlist li.preview').click(function() {
     
     AP.init({
         playList: [{'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]
+    });
+});
+
+jQuery('.playlist li.noname').click(function() {
+    AP.destroy();
+    //player.parentNode.removeChild(player);
+    
+    AP.init({
+        playList: [{'icon': demo, 'title': 'Not Named', 'file': 'http://gustavo-muratalla.me/assets/music/newbeatt.mp3'}]
     });
 });

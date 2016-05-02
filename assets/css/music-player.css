@@ -51,7 +51,6 @@ footer.m-player{
 .playlist {
     list-style-type: none;
     width: 30%;
-    height: ;
     padding: 30px;
     margin-top: auto;
     margin-right: auto;
@@ -118,6 +117,45 @@ div.playlist2{
         margin: auto;
         margin-top: 50px;
         flex: 0 25%;
+    }
+}
+
+.about-music{
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    display: block;
+    font-size: 50px;
+}
+
+div.about-music h2{
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+div.about-music p{
+    width: 80%;
+    margin: auto;
+    height: 90%;
+    font-size: 25px;
+}
+
+div.about-music a{
+    color: #9d9d9d;
+}
+
+div.about-music a:hover{
+    color: beige;
+}
+
+@media (max-width: 650px) {
+    .about-music{
+        margin: auto;
+        margin-top: 60px;
+        padding-bottom: 220px;
+    }
+    .music{
+        height: auto;
     }
 }
 

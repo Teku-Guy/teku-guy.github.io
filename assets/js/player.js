@@ -7,7 +7,6 @@ var AudioPlayer = (function() {
   // Player vars
   var
   player = document.getElementById('ap'),
-  link,
   playBtn,
   prevBtn,
   nextBtn,
@@ -30,10 +29,11 @@ var AudioPlayer = (function() {
   apActive = false,
   // playlist vars
   pl,
+  plTemplate,
   plLi,
   // settings
   settings = {
-    volume   : 0.5,
+    volume   : 0.25,
     autoPlay : false,
     notification: true,
     playList : []
@@ -122,7 +122,7 @@ var AudioPlayer = (function() {
  */
     function renderPL() {
       var html = [];
-      var tpl =
+      var tpl = plTemplate =
         '<li data-track="{count}">'+
           '<div class="pl-number">'+
             '<div class="pl-count">'+
@@ -165,6 +165,36 @@ var AudioPlayer = (function() {
       plLi = pl.querySelectorAll('li');
 
       pl.addEventListener('click', listHandler, false);
+
+    }
+
+    // TEST TODO
+    function updatePL(addArray) {
+      // var test = [
+      //   {'icon': 'http://a3.mzstatic.com/us/r30/Music/v4/bb/f8/f4/bbf8f45f-5120-3008-634b-b4391da7adbe/cover170x170.jpeg', 'title': 'Ryan Star - Stay Awhile', 'file': '../music/Stay Awhile.mp3'}
+      // ];
+      if(!Array.isArray(addArray)) {
+        return;
+      }
+      if(addArray.length === 0) {
+        return;
+      }
+      // test = null;
+      var t = [];
+      var c = playList.length;
+      playList.push.apply(playList, addArray);
+      addArray.forEach(function(item) {
+        t.push(
+          plTemplate.replace('{count}', c++).replace('{title}', item.title)
+        );
+      });
+      pl.querySelector('.pl-list').insertAdjacentHTML('beforeEnd', t.join(''));
+      var emptyBlock = pl.querySelector('.pl-empty');
+      if(emptyBlock) {
+        pl.removeChild(emptyBlock);
+      }
+      plLi = pl.querySelectorAll('li');
+      console.info('ÐÐ¾Ð²Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½ Ðº Ñ‚ÐµÐºÑƒÑ‰ÐµÐ¼Ñƒ- ' + playList);
     }
 
     function listHandler(evt) {
@@ -203,8 +233,10 @@ var AudioPlayer = (function() {
               }
               else {
                 // audio.currentTime = 0;
-                audio.src = playList[index].file;
-                document.title = trackTitle.innerHTML = playList[index].title;
+                // audio.src = playList[index-1].file;
+                // audio.src = '';
+                // document.title = trackTitle.innerHTML = playList[index-1].title;
+                document.title = 'AP';
                 progressBar.style.width = 0;
               }
             }
@@ -231,7 +263,7 @@ var AudioPlayer = (function() {
       }
       plLi[current].classList.add('pl-current');
     }
-    
+
 
 /**
  *  Player methods
@@ -285,7 +317,10 @@ var AudioPlayer = (function() {
     progressBar.style.width = 0;
     preloadBar.style.width = 0;
     playBtn.classList.remove('playing');
-    pl.innerHTML = '<div class="pl-empty">PlayList is empty</div>';
+    pl.querySelector('.pl-list').innerHTML = '';
+    if(!pl.querySelector('.pl-empty')) {
+      pl.insertAdjacentHTML('beforeEnd', '<div class="pl-empty">PlayList is empty</div>');
+    }
   }
 
   function playToggle() {
@@ -339,6 +374,10 @@ var AudioPlayer = (function() {
   }
 
   function plToggle() {
+    if(pl.classList.contains('hide')) {
+      console.log(1);
+      setTimeout(updatePL, 3000);
+    }
     this.classList.toggle('ap-active');
     pl.classList.toggle('hide');
   }
@@ -490,9 +529,7 @@ var AudioPlayer = (function() {
     audio.removeEventListener('timeupdate', update, false);
     audio.removeEventListener('ended', doEnd, false);
     //player.parentNode.removeChild(player);
-      
-      
-      
+
     // Playlist
     pl.removeEventListener('click', listHandler, false);
     pl.parentNode.removeChild(pl);
@@ -555,6 +592,7 @@ var AudioPlayer = (function() {
  */
   return {
     init: init,
+    update: updatePL,
     destroy: destroy
   };
 
@@ -566,68 +604,118 @@ window.AP = AudioPlayer;
 
 
 // test image for web notifications
-var mustbenice = 'http://images.rapgenius.com/7c48c54b9ce1776f83c093556ecb4411.1000x1000x1.jpg';
-var demo = 'http://funkyimg.com/i/21pX5.png';
+var iconImage = 'http://funkyimg.com/i/21pX5.png';
 
-var allTracks = [{'icon': mustbenice, 'title': 'Must Be Nice', 'file': 'http://gustavo-muratalla.me/assets/music/track1.mp3'},
-    {'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'},
-    {'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]; 
-
-var newest = [{'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'},
-    {'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}];
-
-//getPlayList
 AP.init({
-  playList: [{'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]
+  playList: [{'icon': iconImage, 'title': 'Must Be Nice', 'file': 'http://gustavo-muratalla.me/assets/music/track1.mp3'}]
 });
 
-/*
-**Playlist switches
-*/
-jQuery('.playlist li.newest').click(function() {
-        AP.destroy();
-        //player.parentNode.removeChild(player);
-    
-        AP.init({
-            playList: myTracks
-        });
-    });
+document.getElementById('update').addEventListener('click', function(e) {
+  e.preventDefault();
+  AP.update([
+      {'icon': iconImage, 'title': 'Not Named', 'file': 'http://gustavo-muratalla.me/assets/music/newbeatt.mp3'}
+  ]);
+})
 
-jQuery('.playlist li.allTracks').click(function() {
-    AP.destroy();
-    //player.parentNode.removeChild(player);
+document.getElementById('up-all').addEventListener('click', function(e) {
+  e.preventDefault();
+  AP.update([
+      {'icon': iconImage, 'title': 'Must Be Nice', 'file': 'http://gustavo-muratalla.me/assets/music/track1.mp3'}
+  ]);
+})
+
+document.getElementById('up-edm').addEventListener('click', function(e) {
+  e.preventDefault();
+  AP.update([
+      {'icon': iconImage, 'title': 'Must Be Nice', 'file': 'http://gustavo-muratalla.me/assets/music/track1.mp3'}
+  ]);
+})
+
+document.getElementById('up-hip').addEventListener('click', function(e) {
+  e.preventDefault();
+  AP.update([
+      {'icon': iconImage, 'title': 'Must Be Nice', 'file': 'http://gustavo-muratalla.me/assets/music/track1.mp3'}
+  ]);
+})
+
+document.getElementById('add-demo').addEventListener('click', function(e) {
+  e.preventDefault();
+  AP.update([
+      {'icon': iconImage, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'}
+  ]);
+})
+
+document.getElementById('add-preview').addEventListener('click', function(e) {
+  e.preventDefault();
+  AP.update([
+      {'icon': iconImage, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}
+  ]);
+})
+
+document.getElementById('add-name').addEventListener('click', function(e) {
+  e.preventDefault();
+  AP.update([
+      {'icon': iconImage, 'title': 'Not Named', 'file': 'http://gustavo-muratalla.me/assets/music/newbeatt.mp3'}
+  ]);
+})
+
+jQuery(document).ready(function() {
     
-    AP.init({
-        playList: allTracks
+    jQuery(".newest").click(function() {
+        jQuery(".playlist .newest ul").slideToggle(350, function(){})
+    });
+    
+    jQuery(".allTracks").click(function() {  
+        jQuery(".playlist .allTracks ul").slideToggle(350, function(){})
+    });
+    
+    jQuery(".edm").click(function() {  
+        jQuery(".playlist .edm ul").slideToggle(350, function(){})
+    });
+    
+    jQuery(".HipHop").click(function() {  
+        jQuery(".playlist .HipHop ul").slideToggle(350, function(){})
+    });
+    
+    jQuery(".demo").click(function() {  
+        jQuery(".playlist .demo ul").slideToggle(350, function(){})
+    });
+    
+    jQuery(".preview").click(function() {  
+        jQuery(".playlist .preview ul").slideToggle(350, function(){})
+    });
+    
+    jQuery(".noname").click(function() {  
+        jQuery(".playlist .noname ul").slideToggle(350, function(){})
     });
 });
 
 /*
 **Single Tracks plist
 */
-jQuery('.playlist li.demo').click(function() {
-    AP.destroy();
-    //player.parentNode.removeChild(player);
+    jQuery('.playlist2 .playlist ul #demo').click(function() {
+        AP.destroy();
+        //player.parentNode.removeChild(player);
     
-    AP.init({
-        playList: [{'icon': demo, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'}]
+        AP.init({
+            playList: [{'icon': iconImage, 'title': 'Demo', 'file': 'http://gustavo-muratalla.me/assets/music/demo.wav'}]
+        });
     });
-});
 
-jQuery('.playlist li.preview').click(function() {
-    AP.destroy();
-    //player.parentNode.removeChild(player);
+    jQuery('.playlist2 .playlist ul #preview').click(function() {
+        AP.destroy();
+        //player.parentNode.removeChild(player);
     
-    AP.init({
-        playList: [{'icon': demo, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]
+        AP.init({
+            playList: [{'icon': iconImage, 'title': 'Preview', 'file': 'http://gustavo-muratalla.me/assets/music/preview.mp3'}]
+        });
     });
-});
-
-jQuery('.playlist li.noname').click(function() {
-    AP.destroy();
-    //player.parentNode.removeChild(player);
     
-    AP.init({
-        playList: [{'icon': demo, 'title': 'Not Named', 'file': 'http://gustavo-muratalla.me/assets/music/newbeatt.mp3'}]
+    jQuery('.playlist2 .playlist ul #noname').click(function() {
+        AP.destroy();
+        //player.parentNode.removeChild(player);
+    
+        AP.init({
+            playList: [{'icon': iconImage, 'title': 'Not Named', 'file': 'http://gustavo-muratalla.me/assets/music/newbeatt.mp3'}]
+        });
     });
-});

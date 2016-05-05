@@ -27,7 +27,7 @@
           <ul class="sub-nav">
             <li><a class="active" href="music">Music</a></li>
             <li><a href="code">Code</a></li>
-            <li><a href="blog">Blog</a></li>
+            <li><a href="blog">Blog</a></li>s
           </ul>
         </li>
         <li><a href="contact">Contact</a></li>
@@ -45,20 +45,55 @@
       <div audio-player>
         <ul class="playlist">
             <h3>Playlist of Tracks</h3>
-            <li class="newest">New</li>
-            <li class="allTracks">All Tracks</li>
-            <li class="edm">EDM/House</li>
-            <li class="HipHop">Hip-Hop/Rap</li>
+            <li class="newest">New
+                <ul>
+                    <li><a href="#!new" class="sub" id="update">Add to Up Next</a></li>
+                    <li><a href="#!hew" class="sub" id="newest">Play Now</a></li>
+                </ul>
+            </li>
+            <li class="allTracks">All Tracks
+                <ul>
+                    <li><a href="#!new" class="sub" id="up-all">Add to Up Next</a></li>
+                    <li><a href="#!hew" class="sub" id="allTracks">Play Now</a></li>
+                </ul>
+            </li>
+            <li class="edm">EDM/House
+                <ul>
+                    <li><a href="#!new" class="sub" id="up-edm">Add to Up Next</a></li>
+                    <li><a href="#!hew" class="sub" id="edm">Play Now</a></li>
+                </ul>
+            </li>
+            <li class="HipHop">Hip-Hop/Rap
+                <ul>
+                    <li><a href="#!new" class="sub" id="up-hip">Add to Up Next</a></li>
+                    <li><a href="#!hew" class="sub" id="hiphop">Play Now</a></li>
+                </ul>
+            </li>
         </ul>
+        </div>
     <div class="playlist2">
         <ul class="playlist">
             <h3>Single Tracks</h3>
-            <li class="demo">Demo</li>
-            <li class="preview">Preview</li>
-            <li class="noname">No Name</li>
-        </ul>
+            <li class="demo">Demo
+                <ul>
+                    <li><a href="#!new" class="sub" id="add-demo">Add to Up Next</a></li>
+                    <li><a href="#!hew" class="sub" id="demo">Play Now</a></li>
+                </ul>
+            </li>
+            <li class="preview">Preview
+                <ul>
+                    <li><a href="#!new" class="sub" id="add-preview">Add to Up Next</a></li>
+                    <li><a href="#!hew" class="sub" id="preview">Play Now</a></li>
+                </ul>
+            </li>
+            <li class="noname">No Name
+                <ul>
+                    <li><a href="#!new" class="sub" id="add-name">Add to Up Next</a></li>
+                    <li><a href="#!hew" class="sub" id="noname">Play Now</a></li>
+                </ul>
+            </li>
+        </ul>    
     </div>
-      </div>
       
       <div class="about-music">
           <h2>Like it?</h2>
@@ -128,7 +163,7 @@
       </div>
       <div class="ap-item ap--track">
         <div class="ap-info">
-            <div class="ap-title"><a class="link">Unknown</a></div>
+            <div class="ap-title">Unknown</div>
           <div class="ap-time">
             <span class="ap-time--current">--</span>
             <span> / </span>

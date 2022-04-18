@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio-app/static/css/main.a4773d91.chunk.css",
-    "main.js": "/portfolio-app/static/js/main.429cb591.chunk.js",
-    "main.js.map": "/portfolio-app/static/js/main.429cb591.chunk.js.map",
-    "runtime-main.js": "/portfolio-app/static/js/runtime-main.0e6c3c2a.js",
-    "runtime-main.js.map": "/portfolio-app/static/js/runtime-main.0e6c3c2a.js.map",
-    "static/js/2.7c159a16.chunk.js": "/portfolio-app/static/js/2.7c159a16.chunk.js",
-    "static/js/2.7c159a16.chunk.js.map": "/portfolio-app/static/js/2.7c159a16.chunk.js.map",
-    "static/js/3.71a9e2ae.chunk.js": "/portfolio-app/static/js/3.71a9e2ae.chunk.js",
-    "static/js/3.71a9e2ae.chunk.js.map": "/portfolio-app/static/js/3.71a9e2ae.chunk.js.map",
+    "main.css": "/portfolio-app/static/css/main.655b75c2.chunk.css",
+    "main.js": "/portfolio-app/static/js/main.c1b80757.chunk.js",
+    "main.js.map": "/portfolio-app/static/js/main.c1b80757.chunk.js.map",
+    "runtime-main.js": "/portfolio-app/static/js/runtime-main.262f5efa.js",
+    "runtime-main.js.map": "/portfolio-app/static/js/runtime-main.262f5efa.js.map",
+    "static/js/2.af38b187.chunk.js": "/portfolio-app/static/js/2.af38b187.chunk.js",
+    "static/js/2.af38b187.chunk.js.map": "/portfolio-app/static/js/2.af38b187.chunk.js.map",
+    "static/js/3.f2010185.chunk.js": "/portfolio-app/static/js/3.f2010185.chunk.js",
+    "static/js/3.f2010185.chunk.js.map": "/portfolio-app/static/js/3.f2010185.chunk.js.map",
     "index.html": "/portfolio-app/index.html",
-    "static/css/main.a4773d91.chunk.css.map": "/portfolio-app/static/css/main.a4773d91.chunk.css.map",
-    "static/js/2.7c159a16.chunk.js.LICENSE.txt": "/portfolio-app/static/js/2.7c159a16.chunk.js.LICENSE.txt",
+    "static/css/main.655b75c2.chunk.css.map": "/portfolio-app/static/css/main.655b75c2.chunk.css.map",
+    "static/js/2.af38b187.chunk.js.LICENSE.txt": "/portfolio-app/static/js/2.af38b187.chunk.js.LICENSE.txt",
     "static/media/custom.scss": "/portfolio-app/static/media/cta.e2aec198.png",
     "static/media/gm.fc920f75.jpg": "/portfolio-app/static/media/gm.fc920f75.jpg",
     "static/media/resume.79b9974d.pdf": "/portfolio-app/static/media/resume.79b9974d.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.0e6c3c2a.js",
-    "static/js/2.7c159a16.chunk.js",
-    "static/css/main.a4773d91.chunk.css",
-    "static/js/main.429cb591.chunk.js"
+    "static/js/runtime-main.262f5efa.js",
+    "static/js/2.af38b187.chunk.js",
+    "static/css/main.655b75c2.chunk.css",
+    "static/js/main.c1b80757.chunk.js"
   ]
 }

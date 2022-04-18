@@ -61,16 +61,16 @@ function ProjectCards(props) {
         
           <Button 
             onClick={() => setOpen(!open)}
-            aria-controls="tags-text"
+            aria-controls="lm-text"
             aria-expanded={open}
             variant="link tag-toggle"
             // className=""
           >
-            Tags:
+            Learn More:
           </Button>
           <Collapse in={open}>
-            <div id="topics tags-text ">
-              ({props.topics})
+            <div id="lm lm-text ">
+              ({props.lm})
             </div>
           </Collapse>
       </div>

@@ -20,14 +20,14 @@ function Resume() {
                             <div id="front-back" class="mt-5">
                                 <h2>Back End Experience</h2>
                                 <p>
-                                    Node.js, Express.js, mySQL, Sequelize, NoSQL (MongoDB, Mongoose), Python, API's (third-party, RESTful, server-side), Templating (Handlebars)
+                                    Node.js, Express.js, MySQL, Sequelize, NoSQL (MongoDB, Mongoose), Python, API's (third-party, RESTful, server-side), Templating (Handlebars)
                                 </p>
                             </div>
                         </div>
                     </Col>
                     <Col> 
                         <div class="justify-content-center mt-5">
-                            <p className="text-center">Donload my full <a href={resumePdf} style={{ color: '#003049' }} className="link text-decoration-none" download target="blank"> resume</a></p>
+                            <p className="text-center">Download my full <a href={resumePdf} style={{ color: '#003049' }} className="link text-decoration-none" download target="blank"> resume</a></p>
                         </div>
                     </Col>
                 </Row>

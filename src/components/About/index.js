@@ -30,19 +30,17 @@ function About() {
                     <hr/>
                     <p>
                       Hello! My name is Gustavo Muratalla Jr. I have been coding for a solid 5-6 years. 
-                      I disembarked on my coding journey when I was an incoming Freshman in Dos Pueblos High School. 
-                      I was inspired by a neighborhood friend to pick up coding since I had developed a passion for computers. 
-                      I started out taking the "Intro to Computer Science" course first to see what I could learn but after the first semester, 
-                      I found that my knowledge and skills were already too advanced for the class but my teacher recommended I finish the course and get the credits. 
-                      So I followed through.
+                      I embarked on my coding journey when I was an incoming Freshman in Dos Pueblos High School. 
+                      I was inspired by a neighborhood friend to pick up coding since I had developed a passion for computers.
                     </p>
                     <p>
-                      In my Sophomore year of High School, I had decided to take the "AP Computer Science" and ever since then, I fell in love with coding. 
-                      Even though this course focused on the programing language Java. I learn most of the major concepts of "OOP" 
-                      ( or Object Orient Programming). From there, I decided to expand my knowledge and have been learning how to program in C#, C++, 
-                      JavaScript, Python, and a bunch of other Programming Languages. 
-                      I also have dabbled with some other frameworks like Laravel, ReactJs, Handlebars, and Jekyll. Feel Free to check out my projects  
-                      on <a className="link-light" href="https://github.com/teku-guy"  rel="noreferrer" target="_blank"> my github.</a>
+                      I decided to expand my knowledge and have attended UCLA Extension Bootcamp to get my certification for Fullstack
+                      JavaScript Web Development. Where i was taught the skills required to use the following technologies Laravel, React.js, Handlebars, and Jekyll. 
+                      Although I may have my Web Development certifications I also proficient in the following programing languages: Java, Python, C#, and Ruby.
+                    </p>
+                    <p>
+                      Feel Free to check out my projects  
+                      on my <a className="link-light" href="https://github.com/teku-guy"  rel="noreferrer" target="_blank">GitHub.</a>
                     </p>
                   </article>
                 </Col>

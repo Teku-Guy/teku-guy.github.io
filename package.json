@@ -1,6 +1,6 @@
 {
-  "homepage": "https://teku-guy.github.io/portfolio-app",
-  "name": "portfolio-app",
+  "homepage": "https://teku-guy.github.io/",
+  "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
